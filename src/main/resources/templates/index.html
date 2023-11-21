@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolg :: Home</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Spring boot Blog Application</h1>
+        <hr />
+        <ul>
+            <li><a th:href="@{/posts/new}">New Post</a></li>
+        </ul>
+        <div class="post-container">
+            <div th:each="post : ${posts}" class="post">
+                <h2>
+                    <a th:href="@{'/posts/'+${post.id}}"
+                       th:text="${post.title}"></a>
+                </h2>
+                <h5 th:text="'Written By : '+${post.user.getFirstName()}+' '+${post.user.getMiddleName()} +' '+${post.user.getLastName()}"></h5>
+
+                <h5 th:text="'Created at : '+${post.createdAt}"></h5>
+                <p th:text="'Meta Title : '+${post.metaTitle}"></p>
+                <p th:text="'Content : '+${post.content}"></p>
+                <p th:text="'Summary : '+${post.summary}"></p>
+             </div>
+            <ul>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

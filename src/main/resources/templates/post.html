@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog :: Post</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <a th:href="@{'/'}">Home</a>
+                <div class="post">
+                    <h2>
+                        <a th:href="@{'/posts/'+${post.id}}"
+                           th:text="${post.title}"></a>
+                    </h2>
+                    <h5 th:text="'Written By : '+${post.user.getFirstName()}+' '+${post.user.getMiddleName()} +' '+${post.user.getLastName()}"></h5>
+
+                    <h5 th:text="'Created at : '+${post.createdAt}"></h5>
+                    <p th:text="'Meta Title : '+${post.metaTitle}"></p>
+                    <p th:text="'Content : '+${post.content}"></p>
+                    <p th:text="'Summary : '+${post.summary}"></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
