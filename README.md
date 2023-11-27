@@ -39,16 +39,21 @@ Bài tập thực hành lab 5 tuần 6 WWW
 
 # 😍Trình bày về project:
 <p>
-  Khi chưa có phân trang
+  Trang home khi chưa login vào
 </p>
- <img src="images/chua_phan_trang.jpg" width = 100%/
+ <img src="images/anh_trang_chu_chua_login.jpg" width = 100%/
 <p>
-  Khi đã có phân trang
+  Thực hiện login vào Trang home 
 </p>
+ <img src="images/thuc_hien_login.jpg" width = 100%/
 <p>
-  Khi đã có phân trang( khi đứng ở trang đâu tiên)
+  Hiển thị ra trang home
 </p>
- <img src="images/Co_phan_trang.jpg" width = 100%/
+ <img src="images/da_login_vao.jpg" width = 100%/
+<p>
+  Thực hiện post bài
+</p>
+ <img src="images/thuc_hien_dang_post.jpg" width = 100%/
  <p>
   Khi đã có phân trang( khi nhấn các nút chuyển)
 </p>
