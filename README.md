@@ -55,13 +55,18 @@ Bài tập thực hành lab 5 tuần 6 WWW
 </p>
  <img src="images/thuc_hien_dang_post.jpg" width = 100%/
  <p>
-  Khi đã có phân trang( khi nhấn các nút chuyển)
+    Hiển thị chi tiết bài post vừa tạo, những trường không có sẽ là null
 </p>
- <img src="images/Co_phan_trang_2.jpg" width = 100%/
+ <img src="images/hien_thi_chi_tiet_bai_post_vua_tao.jpg" width = 100%/
 <p>
-  Khi đã có phân trang( khi đứng ở trang cuối)
+  Hiển thị bài post ra trang home
 </p>
- <img src="images/Co_phan_trang_3.jpg" width = 100%/
+ <img src="images/cap_nhat_bai_post_ra_trang_home.jpg" width = 100%/
+<p>
+<p>
+  Dữ liệu của comment đã có nhưng chưa render ra
+</p>
+ <img src="images/co_du_lieu_cmt.jpg" width = 100%/
 <p>
 ============================================================
 </p>
