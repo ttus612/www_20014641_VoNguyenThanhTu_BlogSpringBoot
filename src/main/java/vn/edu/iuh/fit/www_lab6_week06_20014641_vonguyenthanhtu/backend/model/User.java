@@ -33,16 +33,16 @@ public class User {
     private String intro;
     @Column(length = 5000)
     private String profile;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Post> posts;
     @OneToMany(mappedBy = "user")
     private List<PostComment> postComments;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "user_authority",
-            joinColumns = @JoinColumn(name = "userId", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "authorityName", referencedColumnName = "name")
+            name = "account_authority",
+            joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "authority_name", referencedColumnName = "name")
     )
     private Set<Authority> authorities = new HashSet<>();
 

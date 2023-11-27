@@ -27,4 +27,10 @@ public class UserService {
     public Optional<User> findByEmail(String mail) {
         return userRepository.findByEmail(mail);
     }
+
+
+    public boolean login(String email, String password) {
+        Optional<User> user = userRepository.findByEmail(email);
+        return user.isPresent() && user.get().getPasswordHash().equals(password);
+    }
 }

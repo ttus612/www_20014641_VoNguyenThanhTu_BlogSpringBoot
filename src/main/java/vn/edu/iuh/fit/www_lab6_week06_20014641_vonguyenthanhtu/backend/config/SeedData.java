@@ -46,14 +46,17 @@ public class SeedData implements CommandLineRunner {
 
 
             // Create Users
-            User user1 = new User("John", null, "Doe", "123456789", "john@example.com", "hashedPassword", LocalDateTime.now(), null, "Intro about John", "Profile of John", null, null, null);
+            User user1 = new User("John", null, "Doe", "123456789", "john@example.com", "password", LocalDateTime.now(), null, "Intro about John", "Profile of John", null, null, null);
             Set<Authority>  authorities1 = new HashSet<>();
             authorityRepository.findById("ROLE_USER").ifPresent(authorities1::add);
             user1.setAuthorities(authorities1);
-            User user2 = new User("Jane", "A.", "Doe", "987654321", "jane@example.com", "hashedPassword", LocalDateTime.now(), null, "Intro about Jane", "Profile of Jane", null, null, null);
+
+            User user2 = new User("Jane", "A.", "Doe", "987654321", "jane@example.com", "password", LocalDateTime.now(), null, "Intro about Jane", "Profile of Jane", null, null, null);
             Set<Authority>  authorities2 = new HashSet<>();
             authorityRepository.findById("ROLE_ADMIN").ifPresent(authorities2::add);
-            user1.setAuthorities(authorities2);
+            authorityRepository.findById("ROLE_USER").ifPresent(authorities2::add);
+            user2.setAuthorities(authorities2);
+
             userService.insert(user1);
             userService.insert(user2);
 
